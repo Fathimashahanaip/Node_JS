@@ -1,0 +1,33 @@
+const express=require("express")
+const Myapp = require("../Controller/User")
+const UseApp = require("../Controller/User")
+const OwnerApp=require("../Controller/User")
+const Userdata=require("../Controller/User")
+const Getdata = require("../Controller/Getdata")
+const Adduser = require("../Controller/Adduser")
+const Productadd = require("../Controller/ProductAdd")
+const Getproduct = require("../Controller/GetProduct")
+const Updateuser = require("../Controller/Update")
+const Del = require("../Controller/Delete")
+const Hashpass = require("../Controller/Passhash")
+const Tokenusercreate = require("../Controller/Tokengen")
+
+const router=express.Router()
+
+// router.route('/').get()
+// router.route('/u').get(UseApp)
+// router.route('/owner').get(OwnerApp)
+// router.route('/user').post(Userdata)
+// router.route('/getuser/:id').get(Getdata)
+// router.route('getuser').get(Getdata)
+// router.route('/adduser').post(Adduser)
+// router.route("/productadd").post(Productadd)
+// router.route("/getproduct/:id").get(Getproduct)
+// router.route("/userupdate/:id").put(Updateuser)
+// router.route("/updateid").put(Updateuser)
+// router.route("/deleteuser/:id").delete(Del)
+// router.route("/hashpass").post(Hashpass)
+router.route('/tokenuser').get(Tokenusercreate)
+
+
+module.exports=router
