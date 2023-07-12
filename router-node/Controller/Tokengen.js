@@ -9,7 +9,7 @@ const Tokenusercreate=async(req,res)=>{
     })
     res.json({
         Id:usertoken._id,
-        Username:usertoken.Ussename,
+        Username:usertoken.Username,
         Email:usertoken.Email,
         Password:usertoken.Password,
         Token:generateToken(usertoken._id)

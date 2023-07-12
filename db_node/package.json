@@ -1,0 +1,17 @@
+{
+  "name": "db_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "react-bootstrap": "^2.7.4",
+    "react-router": "^6.12.0",
+    "react-router-dom": "^6.12.0"
+  }
+}

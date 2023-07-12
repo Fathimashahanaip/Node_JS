@@ -11,9 +11,11 @@ const Updateuser = require("../Controller/Update")
 const Del = require("../Controller/Delete")
 const Hashpass = require("../Controller/Passhash")
 const Tokenusercreate = require("../Controller/Tokengen")
+const Login = require("../Controller/Login")
+const Middtoken = require("../Middleware/Token")
 
 const router=express.Router()
-
+const middleware=[Middtoken]
 // router.route('/').get()
 // router.route('/u').get(UseApp)
 // router.route('/owner').get(OwnerApp)
@@ -27,7 +29,9 @@ const router=express.Router()
 // router.route("/updateid").put(Updateuser)
 // router.route("/deleteuser/:id").delete(Del)
 // router.route("/hashpass").post(Hashpass)
-router.route('/tokenuser').get(Tokenusercreate)
+router.route("/tokenuser").post(Tokenusercreate)
+router.route("/login").post(middleware,Login)
+
 
 
 module.exports=router
